@@ -86,7 +86,3 @@ reports/figures/                Confusion matrix and misclassification gallery
 ## Dataset attribution
 
 Scikit-learn's handwritten digits dataset: https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_digits.html
-
-## Responsible portfolio use
-
-The modeling code and documentation were prepared with AI development assistance. Reproduce the outputs, review and understand the choices, and personalize the work before presenting it as your independent achievement in a resume or graduate school application.
