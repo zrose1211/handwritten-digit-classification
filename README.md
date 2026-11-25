@@ -2,7 +2,7 @@
 
 **Image classification with reproducible cross-validation, a sealed holdout, a usable inference script, and model-error inspection.**
 
-![Test confusion matrix](handwritten-digit-classification/reports/figures/test_confusion_matrix.png)
+![Test confusion matrix](reports/figures/test_confusion_matrix.png)
 
 ## Project question
 
@@ -28,7 +28,7 @@ The classification model was **selected on the development set only**, using fiv
 5. Select the highest development CV **macro F1**, retrain on all 1,437 development images, and evaluate the sealed test set once.
 6. Export the confusion matrix, a gallery of misclassifications, per-class metrics, predictions and a serialized model.
 
-![Misclassified digit examples](handwritten-digit-classification/reports/figures/error_gallery.png)
+![Misclassified digit examples](reports/figures/error_gallery.png)
 
 ## Compare the candidates
 
@@ -46,7 +46,6 @@ The complete reproducible scoreboard, including fold variability, is in `reports
 ```bash
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
-cd handwritten-digit-classification
 pip install -r requirements.txt
 python -m pytest -q
 python -m src.pipeline
@@ -67,7 +66,6 @@ The file must contain a 1D array of exactly 64 numbers. This demonstration uses 
 ## Project files
 
 ```text
-handwritten-digit-classification/  (project directory)
 src/pipeline.py                   Dataset split, CV, model training, evaluation and plots
 src/infer.py                      Checked command-line prediction function
 tests/test_pipeline.py           Split determinism, CV and input validation
