@@ -1,0 +1,112 @@
+{
+  "dataset": "scikit-learn digits (1797 examples of 8x8 handwritten digits)",
+  "development_samples": 1437,
+  "held_out_test_samples": 360,
+  "selection_criterion": "5-fold stratified development-set cross-validation, macro F1",
+  "cross_validation_ranking": [
+    {
+      "model": "svm_rbf_c1",
+      "mean_cv_macro_f1": 0.9812,
+      "std_cv_macro_f1": 0.0059
+    },
+    {
+      "model": "pca95_svm",
+      "mean_cv_macro_f1": 0.9798,
+      "std_cv_macro_f1": 0.0063
+    },
+    {
+      "model": "svm_rbf_c10",
+      "mean_cv_macro_f1": 0.9798,
+      "std_cv_macro_f1": 0.0063
+    },
+    {
+      "model": "logistic_regression",
+      "mean_cv_macro_f1": 0.9679,
+      "std_cv_macro_f1": 0.0073
+    }
+  ],
+  "selected_model": "svm_rbf_c1",
+  "held_out_test_accuracy": 0.975,
+  "held_out_test_macro_f1": 0.9748,
+  "test_errors": 9,
+  "test_per_digit": {
+    "0": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 36.0
+    },
+    "1": {
+      "precision": 0.9459459459459459,
+      "recall": 0.9722222222222222,
+      "f1-score": 0.958904109589041,
+      "support": 36.0
+    },
+    "2": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 35.0
+    },
+    "3": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 37.0
+    },
+    "4": {
+      "precision": 0.9459459459459459,
+      "recall": 0.9722222222222222,
+      "f1-score": 0.958904109589041,
+      "support": 36.0
+    },
+    "5": {
+      "precision": 0.9736842105263158,
+      "recall": 1.0,
+      "f1-score": 0.9866666666666667,
+      "support": 37.0
+    },
+    "6": {
+      "precision": 0.972972972972973,
+      "recall": 1.0,
+      "f1-score": 0.9863013698630136,
+      "support": 36.0
+    },
+    "7": {
+      "precision": 0.9210526315789473,
+      "recall": 0.9722222222222222,
+      "f1-score": 0.9459459459459459,
+      "support": 36.0
+    },
+    "8": {
+      "precision": 1.0,
+      "recall": 0.9142857142857143,
+      "f1-score": 0.9552238805970149,
+      "support": 35.0
+    },
+    "9": {
+      "precision": 1.0,
+      "recall": 0.9166666666666666,
+      "f1-score": 0.9565217391304348,
+      "support": 36.0
+    },
+    "accuracy": 0.975,
+    "macro avg": {
+      "precision": 0.9759601706970129,
+      "recall": 0.9747619047619047,
+      "f1-score": 0.9748467821381158,
+      "support": 360.0
+    },
+    "weighted avg": {
+      "precision": 0.9758870712818082,
+      "recall": 0.975,
+      "f1-score": 0.9749341232105315,
+      "support": 360.0
+    }
+  },
+  "limitations": [
+    "Small 8x8 benchmark images; this is not a production OCR system.",
+    "Images are drawn from the same dataset distribution, so real-world transfer is unmeasured.",
+    "The held-out test set was not used to select the model."
+  ]
+}
