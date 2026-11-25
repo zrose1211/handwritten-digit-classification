@@ -1,5 +1,7 @@
 # Handwritten Digit Classification: Model Benchmark + Error Analysis
 
+[Python](https://www.python.org/) · [Automated checks](https://github.com/zrose1211/handwritten-digit-classification/actions) · [Source files](https://github.com/zrose1211/handwritten-digit-classification/tree/main)
+
 **Image classification with reproducible cross-validation, a sealed holdout, a usable inference script, and model-error inspection.**
 
 ![Test confusion matrix](reports/figures/test_confusion_matrix.png)
@@ -39,7 +41,7 @@ The classification model was **selected on the development set only**, using fiv
 | Standardized RBF SVM, C=10 | 0.9798 |
 | Standardized logistic regression | 0.9679 |
 
-The complete reproducible scoreboard, including fold variability, is in `reports/metrics.json`.
+The complete reproducible scoreboard, including fold variability, is in [`reports/metrics.json`](reports/metrics.json).
 
 ## Run it
 
@@ -84,3 +86,7 @@ reports/figures/                Confusion matrix and misclassification gallery
 ## Dataset attribution
 
 Scikit-learn's handwritten digits dataset: https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_digits.html
+
+## Automated evaluation
+
+The [Portfolio checks workflow](https://github.com/zrose1211/handwritten-digit-classification/actions/workflows/checks.yml) runs the test suite on GitHub Actions. Select **Run workflow** to regenerate the evaluation outputs; download the `evaluation-results` artifact from a successful run. The digits dataset is bundled with scikit-learn.
